@@ -1,5 +1,5 @@
 {
-  "name": "Obsidian Bookmark Creator",
+  "name": "Obsidian Website Bookmarks",
   "description": "Bookmark the current Firefox tab into Obsidian.",
   "homepage_url": "https://github.com/patrikzudel/firefox-obsidian-bookmark",
   "version": "1.0.3",
@@ -28,7 +28,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "obsidian_bookmark_creator@christiet"
+      "id": "obsidian_bookmark_creator@patrikzudel"
     }
   }
 }
