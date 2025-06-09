@@ -1,8 +1,8 @@
 {
-  "name": "Obsidian Website Bookmarks",
+  "name": "Obsidian Bookmark Creator",
   "description": "Bookmark the current Firefox tab into Obsidian.",
   "homepage_url": "https://github.com/patrikzudel/firefox-obsidian-bookmark",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 3,
   "permissions": [
     "storage",
@@ -14,21 +14,21 @@
       "32": "assets/ico.svg"
     },
     "default_title": "Bookmark page (Obsidian)",
-    "browser_style": true,
-        "default_popup": "src/popup/popup.html",
-    "show_matches": ["<all_urls>"]
+    "default_popup": "src/popup/popup.html",
+    "show_matches": [
+      "<all_urls>"
+    ]
   },
   "options_ui": {
-    "page": "src/html/options.html",
-    "browser_style": true
+    "page": "src/options/options.html",
+    "open_in_tab": true
   },
   "icons": {
     "32": "assets/ico_32.png"
   },
   "browser_specific_settings": {
-  "gecko": {
-    "id": "obsidian_website_bookmarks@patrikzudel"
+    "gecko": {
+      "id": "obsidian_bookmark_creator@christiet"
+    }
   }
-}
-
 }
