@@ -14,7 +14,6 @@ async function clipPage(url, title, tags, description) {
 	const { clipper_opts_template: template } = await browser.storage.local.get(
 		"clipper_opts_template"
 	);
-	// const defaultTemplate = `\n> [!info] {title}\n> {description}\n> {url}\n> {tags}\n`;
 	const defaultTemplate = `## {title} {tags}\n- *{description}*\n- {url}`;
 
 	const bookmarkTemplate = template || defaultTemplate;
@@ -24,7 +23,7 @@ async function clipPage(url, title, tags, description) {
 		.replace("{url}", url)
 		.replace("{description}", description)
 		.replace("{tags}", tags)
-		.replace(/\\n/g, '\n');
+		.replace(/\\n/g, "\n");
 	let newStr = encodeURIComponent(str);
 
 	const obsidianURI = `obsidian://advanced-uri?vault=${vaultName}&filepath=${vaultPath}&data=${newStr}&mode=append`;
@@ -87,20 +86,4 @@ window.addEventListener("DOMContentLoaded", async () => {
 			addBookmarkToObsidian();
 		}
 	});
-
-	// browser.runtime.onMessage.addListener(message => {
-	//   if(message.message === 'dropdown_data') {
-	//     const categorySelect = document.querySelector('#topic-selector');
-	//     const files = message.data;
-	//     sortByKey(files, 'fileName')
-	//     for (file of files) {
-	//       const opt = document.createElement('option');
-	//       opt.text = file.fileName;
-	//       opt.value = file.filePath;
-	//       categorySelect.add(opt);
-	//     }
-	//   }
-	// })
-
-	// browser.runtime.sendMessage({message: 'ready'});
 });
