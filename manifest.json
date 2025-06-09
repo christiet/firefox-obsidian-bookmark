@@ -2,8 +2,8 @@
   "name": "Obsidian Website Bookmarks",
   "description": "Bookmark the current Firefox tab into Obsidian.",
   "homepage_url": "https://github.com/patrikzudel/firefox-obsidian-bookmark",
-  "version": "1.0.1",
-  "manifest_version": 2,
+  "version": "1.0.2",
+  "manifest_version": 3,
   "permissions": [
     "storage",
     "activeTab",
